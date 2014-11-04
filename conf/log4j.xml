@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+
+  <!-- DEFINE A CONSOLE APPENDER -->
+  <appender name="ConsoleLog" class="org.apache.log4j.ConsoleAppender">
+    <param name="Target"    value="System.out"/>
+    <param name="Threshold" value="DEBUG"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{HH:mm:ss,SSS} %-5p [%c] (%t) %s%E%n"/>
+    </layout>
+  </appender>
+
+  <appender name="BUILDER" class="org.apache.log4j.DailyRollingFileAppender">
+    <param name="File" value="log/service.builder.log"/>
+    <param name="DatePattern" value="'_'yyyyMMdd'.log'"/>
+    <param name="Append" value="true"/>
+    <param name="BufferedIO" value="false"/>
+    <param name="BufferSize" value="0"/>
+    <param name="ImmediateFlush" value="true"/>
+    <layout class="org.apache.log4j.PatternLayout" >
+      <param name="ConversionPattern" value="%d{HH:mm:ss,SSS} %-5p [%c] (%t) %s%E%n"/>
+    </layout>
+  </appender>
+
+  <!-- put appender in asynchronous-wrapper to gain performance -->
+  <appender name="BUILDER_async" class="org.apache.log4j.AsyncAppender">
+    <appender-ref ref="BUILDER" />
+  </appender>
+
+  <logger name="fabermaster.code.fusion" additivity="true">
+    <priority value="DEBUG" />
+    <appender-ref ref="BUILDER_async" />
+  </logger>
+
+  <!-- root>
+    <appender-ref ref="ConsoleLog"/>
+  </root -->
+</log4j:configuration>
