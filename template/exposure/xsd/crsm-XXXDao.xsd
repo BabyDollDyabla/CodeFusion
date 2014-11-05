@@ -1,0 +1,182 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.1"
+  elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+  <xs:include schemaLocation="./baseRequestResponse.xsd" />
+
+  <!-- REQUEST OBJECTS -->
+
+    <!-- CREATION OBJECTS -->
+  <xs:complexType name="create[EntityName]RequestType">
+    <xs:complexContent>
+      <xs:extension base="requestType">
+        <xs:sequence>
+          <xs:element name="[fieldName]CreateList" type="[fieldName]CreateListType" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="[fieldName]CreateListType">
+    <xs:sequence>
+        <xs:element name="[fieldName]CreateObject" type="[fieldName]CreateObjectType" minOccurs="1" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:property name="[collectionFieldName]" />
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="[fieldName]CreateObjectType">
+    <xs:sequence>
+      <xs:element name="name"        type="xs:string"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="description" type="xs:string"  minOccurs="0" maxOccurs="1" />
+      <xs:element name="statusId" 	 type="xs:int" minOccurs="0" maxOccurs="1" />
+    </xs:sequence> 
+  </xs:complexType>
+
+    <!-- UPDATE OBJECTS -->
+  <xs:complexType name="update[EntityName]RequestType">
+    <xs:complexContent>
+      <xs:extension base="requestType">
+        <xs:sequence>
+          <xs:element name="[fieldName]UpdateList" type="[fieldName]UpdateListType" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="[fieldName]UpdateListType">
+    <xs:sequence>
+        <xs:element name="[fieldName]UpdateObject" type="[fieldName]UpdateObjectType" minOccurs="1" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:property name="[collectionFieldName]" />
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="[fieldName]UpdateObjectType">
+    <xs:sequence>
+      <xs:element name="[fieldName]Id"    type="xs:long"    minOccurs="1" maxOccurs="1" /> 
+      <xs:element name="name"        type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="statusId" 	 type="xs:int" minOccurs="0" maxOccurs="1" />
+    </xs:sequence> 
+  </xs:complexType>
+
+    <!-- RETRIEVE OBJECTS -->
+  <xs:complexType name="retrieve[EntityName]RequestType">
+    <xs:complexContent>
+      <xs:extension base="requestType">
+        <xs:sequence>
+          <xs:element name="name"         			type="xs:string" minOccurs="0" maxOccurs="1" />
+          <xs:element name="description"  			type="xs:string" minOccurs="0" maxOccurs="1" />
+          <xs:element name="statusId" 	  			type="xs:int"    minOccurs="0" maxOccurs="1" />
+          <xs:element name="filteringPageElements" 	type="xs:int"    minOccurs="0" maxOccurs="1" />
+          <xs:element name="filteringPageNumber"   	type="xs:int"    minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+
+
+  <!-- RESPONSE OBJECTS -->
+
+    <!-- CREATION OBJECTS -->
+  <xs:complexType name="create[EntityName]ResponseType">
+    <xs:complexContent>
+      <xs:extension base="responseType">
+        <xs:sequence>
+          <xs:element name="[fieldName]CreatedList" type="[fieldName]CreatedListType" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="[fieldName]CreatedListType">
+    <xs:sequence>
+        <xs:element name="[fieldName]CreatedObject" type="[fieldName]CreatedObjectType" minOccurs="1" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:property name="[collectionFieldName]" />
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="[fieldName]CreatedObjectType">
+    <xs:sequence>
+      <xs:element name="[fieldName]Id" type="xs:integer" minOccurs="1" maxOccurs="1" />
+      <xs:element name="name"     type="xs:string"  minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+    <!-- UPDATE OBJECTS -->
+  <xs:complexType name="update[EntityName]ResponseType">
+    <xs:complexContent>
+      <xs:extension base="responseType">
+        <xs:sequence>
+          <xs:element name="[fieldName]UpdatedList" type="[fieldName]UpdatedListType" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="[fieldName]UpdatedListType">
+    <xs:sequence>
+        <xs:element name="[fieldName]UpdatedObject" type="[fieldName]UpdatedObjectType" minOccurs="1" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:property name="[collectionFieldName]" />
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="[fieldName]UpdatedObjectType">
+    <xs:sequence>
+      <xs:element name="[fieldName]Id" type="xs:integer" minOccurs="1" maxOccurs="1" />
+      <xs:element name="name"     type="xs:string"  minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+    <!-- RETRIEVE OBJECTS -->
+  <xs:complexType name="retrieve[EntityName]ResponseType">
+    <xs:complexContent>
+      <xs:extension base="responseType">
+        <xs:sequence>
+          <xs:element name="[fieldName]RetrievedList" type="[fieldName]RetrievedListType" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="[fieldName]RetrievedListType">
+    <xs:sequence>
+        <xs:element name="[fieldName]RetrievedObject" type="[fieldName]RetrievedObjectType" minOccurs="1" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:property name="[collectionFieldName]" />
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="[fieldName]RetrievedObjectType">
+    <xs:sequence>
+      <xs:element name="[fieldName]Id"    type="xs:long" minOccurs="1" maxOccurs="1" />
+      <xs:element name="name"        type="xs:string"  minOccurs="0" maxOccurs="1" />
+      <xs:element name="description" type="xs:string"  minOccurs="0" maxOccurs="1" />
+      <xs:element name="statusId" 	 type="xs:int"    minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

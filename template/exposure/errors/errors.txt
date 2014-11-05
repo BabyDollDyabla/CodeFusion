@@ -1,0 +1,130 @@
+##########################
+#   create[EntityName]   #
+#################################################################################################################################
+errors.stringLength.code.create[EntityName].fieldMap.fieldDetail.key=CRSM_01.[EntityNumber].4-[createApiNumber]-001
+errors.stringLength.description.create[EntityName].fieldMap.fieldDetail.key=Size error: fieldMap key length must be between {0} and {1}
+
+errors.stringLength.code.create[EntityName].fieldMap.fieldDetail.value=CRSM_01.[EntityNumber].4-[createApiNumber]-002
+errors.stringLength.description.create[EntityName].fieldMap.fieldDetail.value=Size error: fieldMap value length must be between {0} and {1}
+
+errors.required.code.create[EntityName].transactionId=CRSM_01.[EntityNumber].4-[createApiNumber]-003
+errors.required.description.create[EntityName].transactionId=Missing transactionId
+
+errors.stringLength.code.create[EntityName].transactionId=CRSM_01.[EntityNumber].4-[createApiNumber]-004
+errors.stringLength.description.create[EntityName].transactionId=Size error: transactionId length must be between {0} and {1}
+
+errors.required.code.create[EntityName].tenant=CRSM_01.[EntityNumber].4-[createApiNumber]-005
+errors.required.description.create[EntityName].tenant=Missing tenant
+
+errors.required.code.create[EntityName].[fieldName]CreateList=CRSM_01.[EntityNumber].4-[createApiNumber]-006
+errors.required.description.create[EntityName].[fieldName]CreateList=Missing [fieldName]s list
+
+errors.listSize.code.create[EntityName].[fieldName]s=CRSM_01.[EntityNumber].4-[createApiNumber]-007
+errors.listSize.description.create[EntityName].[fieldName]s=The [fieldName] list to create cannot be empty
+
+errors.required.code.create[EntityName].[fieldName].name=CRSM_01.[EntityNumber].4-[createApiNumber]-008
+errors.required.description.create[EntityName].[fieldName].name=Missing [fieldName] name
+
+errors.stringLength.code.create[EntityName].[fieldName].name=CRSM_01.[EntityNumber].4-[createApiNumber]-009
+errors.stringLength.description.create[EntityName].[fieldName].name=Size error: [fieldName] name length must be between {0} and {1}
+
+errors.stringLength.code.create[EntityName].[fieldName].description=CRSM_01.[EntityNumber].4-[createApiNumber]-010
+errors.stringLength.description.create[EntityName].[fieldName].description=Size error: [fieldName] description length must be between {0} and {1}
+
+errors.exception.code.create[EntityName].5010.DaoException=CRSM_03.[EntityNumber].4-[createApiNumber]-011
+
+errors.exception.code.create[EntityName].5001.DaoException=CRSM_03.[EntityNumber].4-[createApiNumber]-012
+
+errors.exception.code.create[EntityName].5002.DaoException=CRSM_01.[EntityNumber].4-[createApiNumber]-013
+
+errors.exception.code.create[EntityName].5005.DaoException=CRSM_01.[EntityNumber].4-[createApiNumber]-014 
+
+
+
+##########################
+#   update[EntityName]   #
+#################################################################################################################################
+errors.stringLength.code.update[EntityName].fieldMap.fieldDetail.key=CRSM_01.[EntityNumber].4-[updateApiNumber]-001
+errors.stringLength.description.update[EntityName].fieldMap.fieldDetail.key=Size error: fieldMap key length must be between {0} and {1}
+
+errors.stringLength.code.update[EntityName].fieldMap.fieldDetail.value=CRSM_01.[EntityNumber].4-[updateApiNumber]-002
+errors.stringLength.description.update[EntityName].fieldMap.fieldDetail.value=Size error: fieldMap value length must be between {0} and {1}
+
+errors.required.code.update[EntityName].transactionId=CRSM_01.[EntityNumber].4-[updateApiNumber]-003
+errors.required.description.update[EntityName].transactionId=Missing transactionId
+
+errors.stringLength.code.update[EntityName].transactionId=CRSM_01.[EntityNumber].4-[updateApiNumber]-004
+errors.stringLength.description.update[EntityName].transactionId=Size error: transactionId length must be between {0} and {1}
+
+errors.required.code.update[EntityName].tenant=CRSM_01.[EntityNumber].4-[updateApiNumber]-005
+errors.required.description.update[EntityName].tenant=Missing tenant
+
+errors.required.code.update[EntityName].[fieldName]UpdateList=CRSM_01.[EntityNumber].4-[updateApiNumber]-006
+errors.required.description.update[EntityName].[fieldName]UpdateList=Missing [fieldName]s list
+
+errors.listSize.code.update[EntityName].[fieldName]s=CRSM_01.[EntityNumber].4-[updateApiNumber]-007
+errors.listSize.description.update[EntityName].[fieldName]s=The [fieldName] list to update cannot be empty
+
+errors.required.code.update[EntityName].[fieldName].id=CRSM_01.[EntityNumber].4-[updateApiNumber]-008
+errors.required.description.update[EntityName].[fieldName].id=Missing [fieldName] id
+
+errors.stringLength.code.update[EntityName].[fieldName].name=CRSM_01.[EntityNumber].4-[updateApiNumber]-009
+errors.stringLength.description.update[EntityName].[fieldName].name=Size error: [fieldName] name length must be between {0} and {1}
+
+errors.stringLength.code.update[EntityName].[fieldName].description=CRSM_01.[EntityNumber].4-[updateApiNumber]-010
+errors.stringLength.description.update[EntityName].[fieldName].description=Size error: [fieldName] description length must be between {0} and {1}
+
+errors.exception.code.update[EntityName].5010.DaoException=CRSM_03.[EntityNumber].4-[updateApiNumber]-011
+
+errors.exception.code.update[EntityName].5001.DaoException=CRSM_03.[EntityNumber].4-[updateApiNumber]-012
+
+errors.exception.code.update[EntityName].5002.DaoException=CRSM_01.[EntityNumber].4-[updateApiNumber]-013
+
+errors.exception.code.update[EntityName].5005.DaoException=CRSM_01.[EntityNumber].4-[updateApiNumber]-014
+
+
+
+##############################
+#   retrieve[EntityName]     #
+#################################################################################################################################
+errors.stringLength.code.retrieve[EntityName].fieldMap.fieldDetail.key=CRSM_01.[EntityNumber].4-[retrieveListApiNumber]-001
+errors.stringLength.description.retrieve[EntityName].fieldMap.fieldDetail.key=Size error: fieldMap key length must be between {0} and {1}
+
+errors.stringLength.code.retrieve[EntityName].fieldMap.fieldDetail.value=CRSM_01.[EntityNumber].4-[retrieveListApiNumber]-002
+errors.stringLength.description.retrieve[EntityName].fieldMap.fieldDetail.value=Size error: fieldMap value length must be between {0} and {1}
+
+errors.required.code.retrieve[EntityName].transactionId=CRSM_01.[EntityNumber].4-[retrieveListApiNumber]-003
+errors.required.description.retrieve[EntityName].transactionId=Missing transactionId
+
+errors.stringLength.code.retrieve[EntityName].transactionId=CRSM_01.[EntityNumber].4-[retrieveListApiNumber]-004
+errors.stringLength.description.retrieve[EntityName].transactionId=Size error: transactionId length must be between {0} and {1}
+
+errors.required.code.retrieve[EntityName].tenant=CRSM_01.[EntityNumber].4-[retrieveListApiNumber]-005
+errors.required.description.retrieve[EntityName].tenant=Missing tenant
+
+errors.stringLength.code.retrieve[EntityName].[fieldName].name=CRSM_01.[EntityNumber].4-[retrieveListApiNumber]-006
+errors.stringLength.description.retrieve[EntityName].[fieldName].name=Size error: [fieldName] name length must be between {0} and {1}
+
+errors.stringLength.code.retrieve[EntityName].[fieldName].description=CRSM_01.[EntityNumber].4-[retrieveListApiNumber]-007
+errors.stringLength.description.retrieve[EntityName].[fieldName].description=Size error: [fieldName] description length must be between {0} and {1}
+
+errors.isANumber.code.retrieve[EntityName].[fieldName].items.per.page=CRSM_01.[EntityNumber].4-[retrieveListApiNumber]-008
+errors.isANumber.description.retrieve[EntityName].[fieldName].items.per.page=Items per page is not a number
+
+errors.isNumberGreaterThan.code.retrieve[EntityName].[fieldName].items.per.page=CRSM_01.[EntityNumber].4-[retrieveListApiNumber]-009
+errors.isNumberGreaterThan.description.retrieve[EntityName].[fieldName].items.per.page=Value error: items per page value must be greater than {0}
+
+errors.isANumber.code.retrieve[EntityName].[fieldName].page.number=CRSM_01.[EntityNumber].4-[retrieveListApiNumber]-010
+errors.isANumber.description.retrieve[EntityName].[fieldName].page.number=Page number is not a number
+
+errors.isNumberGreaterThan.code.retrieve[EntityName].[fieldName].page.number=CRSM_01.[EntityNumber].4-[retrieveListApiNumber]-011
+errors.isNumberGreaterThan.description.retrieve[EntityName].[fieldName].page.number=Value error: page number value must be greater than {0}
+
+errors.requiredIf.code.retrieve[EntityName].[fieldName].page.number=CRSM_01.[EntityNumber].4-[retrieveListApiNumber]-012
+errors.requiredIf.description.retrieve[EntityName].[fieldName].page.number=Missing page number. It is mandatory when items per page have been specified
+
+errors.exception.code.retrieve[EntityName].5003.DaoException=CRSM_03.[EntityNumber].4-[retrieveListApiNumber]-013
+
+errors.exception.code.retrieve[EntityName].5002.DaoException=CRSM_01.[EntityNumber].4-[retrieveListApiNumber]-014
+
+errors.exception.code.retrieve[EntityName].5005.DaoException=CRSM_01.[EntityNumber].4-[retrieveListApiNumber]-015

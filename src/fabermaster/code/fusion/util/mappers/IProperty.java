@@ -75,14 +75,21 @@ public interface IProperty
    */
   public enum EParameters
   {
-    PLACEHOLDER_BASE_PATH      ("The placheholder files base path",                EComponentProperties.PROPERTIES_FILE,  "code.fusion.placeholder.base.path"),
-    TEMPLATES_BASE_PATH        ("The templates files base path",                   EComponentProperties.PROPERTIES_FILE,  "code.fusion.templates.base.path"),
-    OUTPUT_BASE_PATH           ("The generated output files base path",            EComponentProperties.PROPERTIES_FILE,  "code.fusion.output.base.path"),
-    SERVICE_OUTPUT_PACKAGE     ("The Service Exposure Output Package",             EComponentProperties.PROPERTIES_FILE,  "code.fusion.service.output.package"),
-    TRANSFORMER_OUTPUT_PACKAGE ("The Service Transformer Output Package",          EComponentProperties.PROPERTIES_FILE,  "code.fusion.transformer.output.package"),
-    VALIDATOR_OUTPUT_PACKAGE   ("The Service Validator Output Package",            EComponentProperties.PROPERTIES_FILE,  "code.fusion.validator.output.package"),
-    ERRORS_OUTPUT_FOLDER       ("The Service Errors Configuration Output Folder",  EComponentProperties.PROPERTIES_FILE,  "code.fusion.error.configuration.output.folder"),
-    XSD_OUTPUT_PACKAGE         ("The Service XSD Repository folder",               EComponentProperties.PROPERTIES_FILE,  "code.fusion.xsd.repository.folder");
+    PLACEHOLDER_BASE_PATH                 ("The placheholder files base path",                EComponentProperties.PROPERTIES_FILE,  "code.fusion.placeholder.base.path"),
+    TEMPLATES_BASE_PATH                   ("The templates files base path",                   EComponentProperties.PROPERTIES_FILE,  "code.fusion.templates.base.path"),
+    OUTPUT_BASE_PATH                      ("The generated output files base path",            EComponentProperties.PROPERTIES_FILE,  "code.fusion.output.base.path"),
+    SERVICE_OUTPUT_PACKAGE                ("The Service Exposure Output Package - up",        EComponentProperties.PROPERTIES_FILE,  "code.fusion.service.output.package"),
+    TRANSFORMER_OUTPUT_PACKAGE            ("The Service Transformer Output Package - up",     EComponentProperties.PROPERTIES_FILE,  "code.fusion.transformer.output.package"),
+    VALIDATOR_OUTPUT_PACKAGE              ("The Service Validator Output Package - up",       EComponentProperties.PROPERTIES_FILE,  "code.fusion.validator.output.package"),
+    ERRORS_OUTPUT_FOLDER                  ("The Service Errors Configuration Output Folder",  EComponentProperties.PROPERTIES_FILE,  "code.fusion.error.configuration.output.folder"),
+    XSD_OUTPUT_PACKAGE                    ("The Service XSD Repository folder",               EComponentProperties.PROPERTIES_FILE,  "code.fusion.xsd.repository.output.folder"),
+    TENANT_BLUEPRINT_OUTPUT_PACKAGE       ("The Tenant Blueprint Repository folder",          EComponentProperties.PROPERTIES_FILE,  "code.fusion.tenant.blueprint.repository.output.folder"),
+    TENANT_SERVICE_IMPL_OUTPUT_PACKAGE    ("The Tenant Service Impl Repository folder",       EComponentProperties.PROPERTIES_FILE,  "code.fusion.tenant.service.impl.output.package"),
+    API_DTO_OUTPUT_PACKAGE                ("The Api dto Repository folder",                   EComponentProperties.PROPERTIES_FILE,  "code.fusion.api.dto.output.package"),
+    DAO_SERVICE_OUTPUT_PACKAGE            ("The Dao Service Repository folder",               EComponentProperties.PROPERTIES_FILE,  "code.fusion.dao.service.output.package"),
+    DAO_SERVCIE_IMPL_OUTPUT_PACKAGE       ("The Dao Service Impl Repository folder",          EComponentProperties.PROPERTIES_FILE,  "code.fusion.dao.service.impl.output.package"),
+    DAO_VALIDATOR_OUTPUT_PACKAGE          ("The Dao Validator Repository folder",             EComponentProperties.PROPERTIES_FILE,  "code.fusion.dao.validator.output.package")
+    ;
 
     //declare logger instance
     private static LogManager          logger         = LogManager.getInstance(EParameters.class);

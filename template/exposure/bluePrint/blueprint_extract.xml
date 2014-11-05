@@ -1,0 +1,26 @@
+
+
+	<bean id="[fieldName]-facade-exposure"
+		class="com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].service.[packagename].[EntityName]FacadeImpl"
+		init-method="configureTenants" destroy-method="disposeTenants">
+		<property name="validationProps" ref="validator-configuration" />
+		<property name="errorProps" ref="errors-configuration" />
+		<property name="transformerProps" ref="transformer-configuration" />
+	</bean>
+	<bean id="[fieldName]-exposure"
+		class="com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].service.[packagename].[EntityName]ServiceImpl">
+		<property name="facade" ref="[fieldName]-facade-exposure" />
+	</bean>
+	
+
+
+	<jaxrs:server id="[fieldName]-service" address="/crsm-[uriContext]">
+		<jaxrs:serviceBeans>
+			<ref component-id="[fieldName]-exposure" />
+		</jaxrs:serviceBeans>
+		<jaxrs:providers>
+			<bean id="jsonProvider" class="com.[companyPackagePart].digital.platform.crsm.api.rest.provider.JacksonConfig" factory-method="getProvider"/>
+		</jaxrs:providers>
+	</jaxrs:server>
+
+

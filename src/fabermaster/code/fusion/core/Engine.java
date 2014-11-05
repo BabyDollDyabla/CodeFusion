@@ -122,6 +122,8 @@ public class Engine implements IEngine
           //log operation
           logger.info(String.format("    Start working with code target [%s]", target.getTargetSuffix()));
 
+          logger.info(String.format("    *** placeholderFile [%s], target [%s]", placeholderFile, target));
+          
           //create specific code template block
           buildTemplates(placeholderFile,
                          serviceBlock.getTargetConfig(target));
@@ -235,8 +237,14 @@ public class Engine implements IEngine
   {
     try
     {
+    	logger.info(String.format("targetInfo is [%s]", (targetInfo != null ? "not null" : "null")));
+    	
+    	String templateFolder = new StringBuilder(EParameters.TEMPLATES_BASE_PATH.getAttributeValue()).append(targetInfo.getTemplateFolder()).toString();
+    	logger.info(String.format("processing template folder [%s]", templateFolder));
+    	
+    	
       //cycle template folder for file
-      for (File template : FSUtilities.getTemplates(new StringBuilder(EParameters.TEMPLATES_BASE_PATH.getAttributeValue()).append(targetInfo.getTemplateFolder()).toString()))
+      for (File template : FSUtilities.getTemplates(templateFolder))
       {
         logger.info(String.format("cycled file is [%s]", template.getName()));
         //check if current cycled item is a normal file type
@@ -295,6 +303,8 @@ public class Engine implements IEngine
     //substitute placeholder tags
     for (PlaceholderInfo key : placeholder.keySet())
     {
+    
+      logger.info(String.format("      processing placeholder [%s]", key));
       //check for placeholder kind
       switch (key.getType())
       {
