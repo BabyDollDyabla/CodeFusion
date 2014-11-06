@@ -1,3 +1,5 @@
+import java.io.Serializable;
+
 /**
  * [EntityName]ResponseData
  *
@@ -9,7 +11,7 @@ package [classPackagePrefix].[packagename];
  * @author [author]
  *
  */
-public class [EntityName]ResponseData {
+public class [EntityName]ResponseData implements Serializable {
 
 	@fields
 	
