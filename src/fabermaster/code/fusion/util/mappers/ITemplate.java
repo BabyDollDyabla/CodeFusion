@@ -226,17 +226,17 @@ public interface ITemplate
                                                    .append(File.separator).append("main")
                                                    .append(File.separator).append("java")
                                                    .append(File.separator).append(EParameters.DAO_SERVICE_OUTPUT_PACKAGE.getAttributeValue())
-                                                   .append(File.separator).toString(),              true,  true),                                           
+                                                   .append(File.separator).toString(),              true,  false),                                           
     DAO_SERVICE_IMPL("impl",             new StringBuilder("src")
                                                    .append(File.separator).append("main")
                                                    .append(File.separator).append("java")
                                                    .append(File.separator).append(EParameters.DAO_SERVCIE_IMPL_OUTPUT_PACKAGE.getAttributeValue())
-                                                   .append(File.separator).toString(),              true,  true),
+                                                   .append(File.separator).toString(),              true,  false),
     DAO_VALIDATOR("validator",           new StringBuilder("src")
                                                    .append(File.separator).append("main")
                                                    .append(File.separator).append("java")
                                                    .append(File.separator).append(EParameters.DAO_VALIDATOR_OUTPUT_PACKAGE.getAttributeValue())
-                                                   .append(File.separator).toString(),              true,  true),
+                                                   .append(File.separator).toString(),              true,  false),
     TENANT_BLUEPRINT("blueprint",        new StringBuilder("src")
                                                    .append(File.separator).append("main")
                                                    .append(File.separator).append("resources")
