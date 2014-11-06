@@ -34,7 +34,7 @@ import com.[companyPackagePart].digital.platform.crsm.dao.dto.[packagename].data
 import com.[companyPackagePart].digital.platform.crsm.dao.dto.[packagename].data.[EntityName]ResponseData;
 import com.[companyPackagePart].digital.platform.crsm.dao.exception.DaoException;
 import com.[companyPackagePart].digital.platform.crsm.dao.exception.DaoException.ExceptionCodes;
-import com.[companyPackagePart].digital.platform.crsm.dao.model.Ref[EntityName];
+import com.[companyPackagePart].digital.platform.crsm.dao.model.[EntityName];
 import com.[companyPackagePart].digital.platform.crsm.dao.model.RefStatus;
 import com.[companyPackagePart].digital.platform.crsm.dao.service.[EntityName]Dao;
 import com.[companyPackagePart].digital.platform.crsm.dao.utils.DaoHelper;
@@ -134,7 +134,7 @@ public class [EntityName]DaoImpl implements [EntityName]Dao
       for ([EntityName]RequestData item : [collectionFieldName])
       {
         //create entity object to insert
-        Ref[EntityName]     [fieldName]  = new Ref[EntityName]();
+        [EntityName]     [fieldName]  = new [EntityName]();
 
         //setting [fieldNameForComment] flat values
         [fieldName].setName(item.getName());
@@ -251,8 +251,8 @@ public class [EntityName]DaoImpl implements [EntityName]Dao
       {
         
         //gets the entity to update
-        Ref[EntityName]  [fieldName]  = DaoHelper.find(entityManager, 
-                                                Ref[EntityName].class, 
+        [EntityName]  [fieldName]  = DaoHelper.find(entityManager, 
+                                                [EntityName].class, 
                                                 item.get[EntityName]Id(), 
                                                 DAO_NAME, 
                                                 "[EntityName] with id [" + item.get[EntityName]Id() + "] not found");
@@ -386,7 +386,7 @@ public class [EntityName]DaoImpl implements [EntityName]Dao
       sortings.put(ERetrieveCriteria.LANGUAGE_NAME, EOrder.ASCENDING);
       
       //execute retrieval query
-      List<Ref[EntityName]> results = (List<Ref[EntityName]>) DaoHelper.executeHqlQuery(Ref[EntityName].class,
+      List<[EntityName]> results = (List<[EntityName]>) DaoHelper.executeHqlQuery([EntityName].class,
                                                                                 QueryBuilder.buildMePlease(entityManager, 
                                                                                                            EEntity.REF_LANGUAGE, 
                                                                                                            buildConditions(request), 
@@ -400,7 +400,7 @@ public class [EntityName]DaoImpl implements [EntityName]Dao
       if (Utils.notEmpty(results))
       {
         //cycle across retrieved result(s)
-        for (Ref[EntityName] result : results)
+        for ([EntityName] result : results)
         {
           //add currently cycled result into returning list
           responseList.add(new [EntityName]ResponseData(result.get[EntityName]Id(),
