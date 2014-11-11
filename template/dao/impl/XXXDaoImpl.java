@@ -186,14 +186,6 @@ public class [EntityName]DaoImpl implements [EntityName]Dao
     }
     catch ( Exception ex )
     { 
-      //check for an already thrown exception by DaoException catcher
-      if (ex instanceof DaoException)
-      {
-        //continue to throw back exception
-        throw (DaoException) ex;
-      }
-      else
-      {
         //log occurred error
         LOGGER.error(EXCEPTION_LOG, ex);
         //roll-back transaction
@@ -203,7 +195,6 @@ public class [EntityName]DaoImpl implements [EntityName]Dao
         		               ERROR_OCCURRED_LOG, 
                                DAO_NAME, 
                                ex);
-      }
     }
     finally 
     {
@@ -318,14 +309,6 @@ public class [EntityName]DaoImpl implements [EntityName]Dao
     }
     catch ( Exception ex )
     { 
-      //check for an already thrown exception by DaoException catcher
-      if (ex instanceof DaoException)
-      {
-        //continue to throw back exception
-        throw (DaoException) ex;
-      }
-      else
-      {
         //log occurred error
         LOGGER.error(EXCEPTION_LOG, ex);
         //roll-back transaction
@@ -335,7 +318,6 @@ public class [EntityName]DaoImpl implements [EntityName]Dao
         		               ERROR_OCCURRED_LOG, 
                                DAO_NAME, 
                                ex);
-      }
     }
     finally 
     {
