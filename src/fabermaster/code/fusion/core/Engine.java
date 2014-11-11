@@ -122,8 +122,6 @@ public class Engine implements IEngine
           //log operation
           logger.info(String.format("    Start working with code target [%s]", target.getTargetSuffix()));
 
-          logger.info(String.format("    *** placeholderFile [%s], target [%s]", placeholderFile, target));
-          
           //create specific code template block
           buildTemplates(placeholderFile,
                          serviceBlock.getTargetConfig(target));

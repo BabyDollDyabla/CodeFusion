@@ -31,24 +31,24 @@ public interface ITemplate
    */
   public static enum EServiceBlock
   {
-    API          ("api",      Arrays.asList( new ECodeTarget[] {    ECodeTarget.API_DTO} )),
-    DAO          ("dao",      Arrays.asList( new ECodeTarget[] {    ECodeTarget.DAO_SERVICE,
-														            ECodeTarget.DAO_SERVICE_IMPL,
-														            ECodeTarget.DAO_VALIDATOR} )),
-    TENANT       ("tenant",   Arrays.asList( new ECodeTarget[] {    ECodeTarget.TENANT_BLUEPRINT,
-														            ECodeTarget.TENANT_SERVICE_IMPL} )),
+    API          ("api",      Arrays.asList( new ECodeTarget[] { ECodeTarget.API_DTO } )),
+    DAO          ("dao",      Arrays.asList( new ECodeTarget[] { ECodeTarget.DAO_SERVICE,
+                                                                 ECodeTarget.DAO_SERVICE_IMPL,
+                                                                 ECodeTarget.DAO_VALIDATOR } )),
+    TENANT       ("tenant",   Arrays.asList( new ECodeTarget[] { ECodeTarget.TENANT_BLUEPRINT,
+                                                                 ECodeTarget.TENANT_SERVICE_IMPL } )),
     EXPOSURE     ("exposure", Arrays.asList( new ECodeTarget[] { ECodeTarget.SERVICE,
-                                                                    ECodeTarget.VALIDATOR,
-                                                                    ECodeTarget.TRANSFORMER,
-                                                                    ECodeTarget.ERROR_CONFIG,
-                                                                    ECodeTarget.XSD} ));
+                                                                 ECodeTarget.VALIDATOR,
+                                                                 ECodeTarget.TRANSFORMER,
+                                                                 ECodeTarget.ERROR_CONFIG,
+                                                                 ECodeTarget.XSD } ));
 
     //declare logger instance
     private static final LogManager logger       = LogManager.getInstance(ITemplate.EServiceBlock.class);
     
     //declare attribute(s)
-    private String                 blockPrefix;
-    private List<ECodeTarget>      targets;
+    private String                  blockPrefix;
+    private List<ECodeTarget>       targets;
 
     /**
      * Enumerator constructor
@@ -196,60 +196,58 @@ public interface ITemplate
    */
   public static enum ECodeTarget
   {
-    SERVICE      ("service",     new StringBuilder("src")
-                                           .append(File.separator).append("main")
-                                           .append(File.separator).append("java")
-                                           .append(File.separator).append(EParameters.SERVICE_OUTPUT_PACKAGE.getAttributeValue())
-                                           .append(File.separator).toString(),              true,  true),
-    VALIDATOR    ("validator",   new StringBuilder("src")
-                                           .append(File.separator).append("main")
-                                           .append(File.separator).append("java")
-                                           .append(File.separator).append(EParameters.VALIDATOR_OUTPUT_PACKAGE.getAttributeValue())
-                                           .append(File.separator).toString(),              true,  true),
-    TRANSFORMER  ("transformer", new StringBuilder("src")
-                                           .append(File.separator).append("main")
-                                           .append(File.separator).append("java")
-                                           .append(File.separator).append(EParameters.TRANSFORMER_OUTPUT_PACKAGE.getAttributeValue())
-                                           .append(File.separator).toString(),              true,  true),
-    ERROR_CONFIG ("errors",      new StringBuilder(EParameters.ERRORS_OUTPUT_FOLDER.getAttributeValue())
-                                           .append(File.separator).toString(),        false, false),
-    XSD          ("xsd",         new StringBuilder("src")
-                                           .append(File.separator).append("main")
-                                           .append(File.separator).append(EParameters.XSD_OUTPUT_PACKAGE.getAttributeValue())
-                                           .append(File.separator).toString(),        true,  false),
-    API_DTO    ("dto",                 new StringBuilder("src")
-                                           .append(File.separator).append("main")
-                                           .append(File.separator).append("java")
-                                           .append(File.separator).append(EParameters.API_DTO_OUTPUT_PACKAGE.getAttributeValue())
-                                           .append(File.separator).toString(),              true,  true),                                     
-    DAO_SERVICE("service",         new StringBuilder("src")
-                                           .append(File.separator).append("main")
-                                           .append(File.separator).append("java")
-                                           .append(File.separator).append(EParameters.DAO_SERVICE_OUTPUT_PACKAGE.getAttributeValue())
-                                           .append(File.separator).toString(),              true,  true),                                           
-    DAO_SERVICE_IMPL("impl",   new StringBuilder("src")
-                                               .append(File.separator).append("main")
-                                               .append(File.separator).append("java")
-                                               .append(File.separator).append(EParameters.DAO_SERVCIE_IMPL_OUTPUT_PACKAGE.getAttributeValue())
-                                               .append(File.separator).toString(),              true,  true),
-    DAO_VALIDATOR("validator",         new StringBuilder("src")
-                                               .append(File.separator).append("main")
-                                               .append(File.separator).append("java")
-                                               .append(File.separator).append(EParameters.DAO_VALIDATOR_OUTPUT_PACKAGE.getAttributeValue())
-                                               .append(File.separator).toString(), true,  true),
-    TENANT_BLUEPRINT("blueprint",   new StringBuilder("src")
-                                               .append(File.separator).append("main")
-                                               .append(File.separator).append("resources")
-                                               .append(File.separator).append("OSGI-INF")
-                                               .append(File.separator).append(EParameters.TENANT_BLUEPRINT_OUTPUT_PACKAGE.getAttributeValue())
-                                               .append(File.separator).toString(), false,  true),                                           
-    TENANT_SERVICE_IMPL("service.impl",   new StringBuilder("src")
-                                                     .append(File.separator).append("main")
-                                                     .append(File.separator).append("java")
-                                                     .append(File.separator).append(EParameters.TENANT_SERVICE_IMPL_OUTPUT_PACKAGE.getAttributeValue())
-                                                     .append(File.separator).toString(), true,  true)                                           
-                                           
-                                           ;
+    SERVICE      ("service",             new StringBuilder("src")
+                                                   .append(File.separator).append("main")
+                                                   .append(File.separator).append("java")
+                                                   .append(File.separator).append(EParameters.SERVICE_OUTPUT_PACKAGE.getAttributeValue())
+                                                   .append(File.separator).toString(),              true,  true),
+    VALIDATOR    ("validator",           new StringBuilder("src")
+                                                   .append(File.separator).append("main")
+                                                   .append(File.separator).append("java")
+                                                   .append(File.separator).append(EParameters.VALIDATOR_OUTPUT_PACKAGE.getAttributeValue())
+                                                   .append(File.separator).toString(),              true,  true),
+    TRANSFORMER  ("transformer",         new StringBuilder("src")
+                                                   .append(File.separator).append("main")
+                                                   .append(File.separator).append("java")
+                                                   .append(File.separator).append(EParameters.TRANSFORMER_OUTPUT_PACKAGE.getAttributeValue())
+                                                   .append(File.separator).toString(),              true,  true),
+    ERROR_CONFIG ("errors",              new StringBuilder(EParameters.ERRORS_OUTPUT_FOLDER.getAttributeValue())
+                                                   .append(File.separator).toString(),              false, false),
+    XSD          ("xsd",                 new StringBuilder("src")
+                                                   .append(File.separator).append("main")
+                                                   .append(File.separator).append(EParameters.XSD_OUTPUT_PACKAGE.getAttributeValue())
+                                                   .append(File.separator).toString(),              true,  false),
+    API_DTO    ("dto",                   new StringBuilder("src")
+                                                   .append(File.separator).append("main")
+                                                   .append(File.separator).append("java")
+                                                   .append(File.separator).append(EParameters.API_DTO_OUTPUT_PACKAGE.getAttributeValue())
+                                                   .append(File.separator).toString(),              true,  true),                                     
+    DAO_SERVICE("service",               new StringBuilder("src")
+                                                   .append(File.separator).append("main")
+                                                   .append(File.separator).append("java")
+                                                   .append(File.separator).append(EParameters.DAO_SERVICE_OUTPUT_PACKAGE.getAttributeValue())
+                                                   .append(File.separator).toString(),              true,  false),                                           
+    DAO_SERVICE_IMPL("impl",             new StringBuilder("src")
+                                                   .append(File.separator).append("main")
+                                                   .append(File.separator).append("java")
+                                                   .append(File.separator).append(EParameters.DAO_SERVCIE_IMPL_OUTPUT_PACKAGE.getAttributeValue())
+                                                   .append(File.separator).toString(),              true,  false),
+    DAO_VALIDATOR("validator",           new StringBuilder("src")
+                                                   .append(File.separator).append("main")
+                                                   .append(File.separator).append("java")
+                                                   .append(File.separator).append(EParameters.DAO_VALIDATOR_OUTPUT_PACKAGE.getAttributeValue())
+                                                   .append(File.separator).toString(),              true,  false),
+    TENANT_BLUEPRINT("blueprint",        new StringBuilder("src")
+                                                   .append(File.separator).append("main")
+                                                   .append(File.separator).append("resources")
+                                                   .append(File.separator).append("OSGI-INF")
+                                                   .append(File.separator).append(EParameters.TENANT_BLUEPRINT_OUTPUT_PACKAGE.getAttributeValue())
+                                                   .append(File.separator).toString(),              false,  true),                                           
+    TENANT_SERVICE_IMPL("service.impl",  new StringBuilder("src")
+                                                   .append(File.separator).append("main")
+                                                   .append(File.separator).append("java")
+                                                   .append(File.separator).append(EParameters.TENANT_SERVICE_IMPL_OUTPUT_PACKAGE.getAttributeValue())
+                                                   .append(File.separator).toString(),              true,  true);
 
     //declare attributes
     private String  templateFolderSuffix;
