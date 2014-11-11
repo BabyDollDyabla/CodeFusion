@@ -79,6 +79,7 @@ public interface IProperty
     TEMPLATES_BASE_PATH                   ("The templates files base path",                   EComponentProperties.PROPERTIES_FILE,  "code.fusion.templates.base.path"),
     OUTPUT_BASE_PATH                      ("The generated output files base path",            EComponentProperties.PROPERTIES_FILE,  "code.fusion.output.base.path"),
     SERVICE_OUTPUT_PACKAGE                ("The Service Exposure Output Package - up",        EComponentProperties.PROPERTIES_FILE,  "code.fusion.service.output.package"),
+    SERVICE_BLUEPRINT_OUTPUT_PACKAGE      ("The Service Exposure Blueprint Repository folder",EComponentProperties.PROPERTIES_FILE,  "code.fusion.service.blueprint.repository.output.folder"),
     TRANSFORMER_OUTPUT_PACKAGE            ("The Service Transformer Output Package - up",     EComponentProperties.PROPERTIES_FILE,  "code.fusion.transformer.output.package"),
     VALIDATOR_OUTPUT_PACKAGE              ("The Service Validator Output Package - up",       EComponentProperties.PROPERTIES_FILE,  "code.fusion.validator.output.package"),
     ERRORS_OUTPUT_FOLDER                  ("The Service Errors Configuration Output Folder",  EComponentProperties.PROPERTIES_FILE,  "code.fusion.error.configuration.output.folder"),

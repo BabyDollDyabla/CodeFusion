@@ -49,10 +49,11 @@ public class Builder
 //                                                    ECodeTarget.ERROR_CONFIG,
 //                                                    ECodeTarget.XSD} ));
       
-      
+//        launchAll("testentity");
+        
 //        launchAll("userroletype");
         
-        launchAll("offering");
+        launchAll("subscription");
       
     }
     catch ( BuilderException ex )
@@ -79,7 +80,8 @@ public class Builder
                                                     ECodeTarget.TRANSFORMER,
                                                     ECodeTarget.VALIDATOR,
                                                     ECodeTarget.ERROR_CONFIG,
-                                                    ECodeTarget.XSD} ));
+                                                    ECodeTarget.XSD,
+                                                    ECodeTarget.SERVICE_BLUEPRINT} ));
       
       
       engine.run(entity, 

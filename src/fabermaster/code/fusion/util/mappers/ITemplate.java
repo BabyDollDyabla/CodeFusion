@@ -41,7 +41,8 @@ public interface ITemplate
                                                                  ECodeTarget.VALIDATOR,
                                                                  ECodeTarget.TRANSFORMER,
                                                                  ECodeTarget.ERROR_CONFIG,
-                                                                 ECodeTarget.XSD } ));
+                                                                 ECodeTarget.XSD,
+                                                                 ECodeTarget.SERVICE_BLUEPRINT} ));
 
     //declare logger instance
     private static final LogManager logger       = LogManager.getInstance(ITemplate.EServiceBlock.class);
@@ -217,6 +218,12 @@ public interface ITemplate
                                                    .append(File.separator).append("main")
                                                    .append(File.separator).append(EParameters.XSD_OUTPUT_PACKAGE.getAttributeValue())
                                                    .append(File.separator).toString(),              true,  false),
+    SERVICE_BLUEPRINT("blueprint",       new StringBuilder("src")
+                                                   .append(File.separator).append("main")
+                                                   .append(File.separator).append("resources")
+                                                   .append(File.separator).append("OSGI-INF")
+                                                   .append(File.separator).append(EParameters.SERVICE_BLUEPRINT_OUTPUT_PACKAGE.getAttributeValue())
+                                                   .append(File.separator).toString(),              false,  true),  
     API_DTO    ("dto",                   new StringBuilder("src")
                                                    .append(File.separator).append("main")
                                                    .append(File.separator).append("java")
