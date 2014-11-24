@@ -128,6 +128,10 @@ public class [EntityName]FacadeImpl extends    TenantAwareExposure
       context.put("entityId", 
                   EEntity.USER);
         
+      //put provided transaction id (from request) into internal context object
+      context.put("transactionId", 
+                  request.getTransactionId());
+      
       //Validate provided request against properly retrieved validation object
       Errors errors = validator.validate(request, 
                                          context);
@@ -139,10 +143,6 @@ public class [EntityName]FacadeImpl extends    TenantAwareExposure
                                                                         context, 
                                                                         EStatusCode.KO));
       }
-
-      //put provided transaction id (from request) into internal context object
-      context.put("transactionId", 
-                  request.getTransactionId());
 
       //get object will use to do the job
       [EntityName]Dao                dao            = this.getService(request.getTenant(), 
@@ -242,6 +242,10 @@ public class [EntityName]FacadeImpl extends    TenantAwareExposure
       context.put("entityId", 
                   EEntity.USER);
         
+      //put provided transaction id (from request) into internal context object
+      context.put("transactionId", 
+                  request.getTransactionId());
+      
       //Validate provided request against properly retrieved validation object
       Errors errors = validator.validate(request, 
                                          context);
@@ -253,10 +257,6 @@ public class [EntityName]FacadeImpl extends    TenantAwareExposure
                                                                         context, 
                                                                         EStatusCode.KO));
       }
-
-      //put provided transaction id (from request) into internal context object
-      context.put("transactionId", 
-                  request.getTransactionId());
 
       //get object will use to do the job
       [EntityName]Dao                dao            = this.getService(request.getTenant(), 
@@ -355,6 +355,10 @@ public class [EntityName]FacadeImpl extends    TenantAwareExposure
       context.put("entityId", 
                   EEntity.USER);
         
+      //put provided transaction id (from request) into internal context object
+      context.put("transactionId", 
+                  request.getTransactionId());
+      
       //Validate provided request against properly retrieved validation object
       Errors errors = validator.validate(request, 
                                          context);
@@ -366,10 +370,6 @@ public class [EntityName]FacadeImpl extends    TenantAwareExposure
                                                                          context, 
                                                                          EStatusCode.KO));
       }
-
-      //put provided transaction id (from request) into internal context object
-      context.put("transactionId", 
-                  request.getTransactionId());
 
       //get object will use to do the job
       [EntityName]Dao            dao         = this.getService(request.getTenant(), 
