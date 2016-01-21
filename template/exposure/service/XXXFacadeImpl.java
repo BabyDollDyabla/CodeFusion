@@ -15,31 +15,31 @@ import org.osgi.util.tracker.ServiceTracker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.[companyPackagePart].digital.platform.crsm.api.data.ExposureCodes.EStatusCode;
-import com.[companyPackagePart].digital.platform.crsm.api.transformer.AbstractTransformer;
-import com.[companyPackagePart].digital.platform.crsm.api.transformer.TransformerException;
-import com.[companyPackagePart].digital.platform.crsm.api.utils.LogUtils;
-import com.[companyPackagePart].digital.platform.crsm.api.utils.ErrorCodeGenerator.EEntity;
-import com.[companyPackagePart].digital.platform.crsm.api.utils.LogUtils.LogLevel;
-import com.[companyPackagePart].digital.platform.crsm.api.validator.AbstractValidator;
-import com.[companyPackagePart].digital.platform.crsm.api.validator.Errors;
-import com.[companyPackagePart].digital.platform.crsm.api.validator.ValidatorException;
-import com.[companyPackagePart].digital.platform.crsm.dao.dto.common.CommonRetrieveFilter;
-import com.[companyPackagePart].digital.platform.crsm.dao.dto.[packagename].data.[EntityName]RequestData;
-import com.[companyPackagePart].digital.platform.crsm.dao.dto.[packagename].data.[EntityName]ResponseData;
-import com.[companyPackagePart].digital.platform.crsm.dao.exception.DaoException;
-import com.[companyPackagePart].digital.platform.crsm.dao.service.[EntityName]Dao;
-import com.[companyPackagePart].digital.platform.crsm.dao.utils.tracker.DaoTrackerCustomizer;
-import com.[companyPackagePart].digital.platform.crsm.exposure.common.TenantAwareExposure;
-import com.[companyPackagePart].digital.platform.crsm.exposure.common.TenantException;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]RequestType;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]ResponseType;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Retrieve[EntityName]RequestType;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Retrieve[EntityName]ResponseType;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Update[EntityName]RequestType;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Update[EntityName]ResponseType;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].transformer.[packagename].Transformers;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].validator.[packagename].Validators;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.data.ExposureCodes.EStatusCode;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.transformer.AbstractTransformer;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.transformer.TransformerException;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.utils.LogUtils;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.utils.ErrorCodeGenerator.EEntity;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.utils.LogUtils.LogLevel;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.validator.AbstractValidator;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.validator.Errors;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.validator.ValidatorException;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.dto.common.CommonRetrieveFilter;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.dto.[packagename].data.[EntityName]RequestData;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.dto.[packagename].data.[EntityName]ResponseData;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.exception.DaoException;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.service.[EntityName]Dao;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.utils.tracker.DaoTrackerCustomizer;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.common.TenantAwareExposure;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.common.TenantException;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]RequestType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]ResponseType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Retrieve[EntityName]RequestType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Retrieve[EntityName]ResponseType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Update[EntityName]RequestType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Update[EntityName]ResponseType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].transformer.[packagename].Transformers;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].validator.[packagename].Validators;
 
 
 /**
@@ -57,7 +57,7 @@ public class [EntityName]FacadeImpl extends    TenantAwareExposure
   private Transformers        transformers;
 
   /* (non-Javadoc)
-   * @see com.[companyPackagePart].digital.platform.crsm.exposure.common.TenantAwareExposure#initServiceTracker()
+   * @see com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.common.TenantAwareExposure#initServiceTracker()
    */
   @Override
   public ServiceTracker initServiceTracker()
@@ -73,7 +73,7 @@ public class [EntityName]FacadeImpl extends    TenantAwareExposure
   }
 
   /* (non-Javadoc)
-   * @see com.[companyPackagePart].digital.platform.crsm.exposure.common.ConfigurationAwareExposure#configureExposure()
+   * @see com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.common.ConfigurationAwareExposure#configureExposure()
    */
   @Override
   public void configureExposure()
@@ -86,7 +86,7 @@ public class [EntityName]FacadeImpl extends    TenantAwareExposure
   }
 
   /* (non-Javadoc)
-   * @see com.[companyPackagePart].digital.platform.crsm.exposure.common.ConfigurationAwareExposure#disposeExposure()
+   * @see com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.common.ConfigurationAwareExposure#disposeExposure()
    */
   @Override
   public void disposeExposure()
@@ -95,7 +95,7 @@ public class [EntityName]FacadeImpl extends    TenantAwareExposure
   }
 
   /* (non-Javadoc)
-   * @see [classPackagePrefix].[packagename].[EntityName]Facade#create[EntityName](com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]RequestType)
+   * @see [classPackagePrefix].[packagename].[EntityName]Facade#create[EntityName](com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]RequestType)
    */
   @SuppressWarnings("unchecked")
   public Create[EntityName]ResponseType create[EntityName](Create[EntityName]RequestType request)
@@ -209,7 +209,7 @@ public class [EntityName]FacadeImpl extends    TenantAwareExposure
   }
 
   /* (non-Javadoc)
-   * @see [classPackagePrefix].[packagename].[EntityName]Facade#update[EntityName](com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]RequestType)
+   * @see [classPackagePrefix].[packagename].[EntityName]Facade#update[EntityName](com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]RequestType)
    */
   @SuppressWarnings("unchecked")
   public Update[EntityName]ResponseType update[EntityName](Update[EntityName]RequestType request)
@@ -323,7 +323,7 @@ public class [EntityName]FacadeImpl extends    TenantAwareExposure
   }
 
   /* (non-Javadoc)
-   * @see [classPackagePrefix].[packagename].[EntityName]Facade#retrieve[EntityName](com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Retrieve[EntityName]RequestType)
+   * @see [classPackagePrefix].[packagename].[EntityName]Facade#retrieve[EntityName](com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Retrieve[EntityName]RequestType)
    */
   public Retrieve[EntityName]ResponseType retrieve[EntityName](Retrieve[EntityName]RequestType request)
   {
@@ -382,12 +382,12 @@ public class [EntityName]FacadeImpl extends    TenantAwareExposure
       CommonRetrieveFilter paginator   = null;
       
       //create paging range object to pass if values have been provided
-      if ((request.getFilteringPageElements() != null) && 
-          (request.getFilteringPageNumber() != null))
+      if ((request.getItemsPerPage() != null) && 
+          (request.getPageNumber() != null))
       {
         //fill pagination object
-        paginator = new CommonRetrieveFilter(request.getFilteringPageElements(),
-                                             request.getFilteringPageNumber());
+        paginator = new CommonRetrieveFilter(request.getItemsPerPage(),
+                                             request.getPageNumber());
       }
 
       //get operation response

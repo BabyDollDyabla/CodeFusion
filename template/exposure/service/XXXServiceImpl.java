@@ -3,7 +3,7 @@
  *
  * @author [author]
  */
-package com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].service.[packagename];
+package com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].service.[packagename];
 
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.Response;
@@ -11,13 +11,13 @@ import javax.ws.rs.core.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.[companyPackagePart].digital.platform.crsm.api.utils.RESTOperationResult;
-import com.[companyPackagePart].digital.platform.crsm.api.utils.RESTOperationResult.ECRUDType;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]RequestType;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Retrieve[EntityName]RequestType;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Retrieve[EntityName]ResponseType;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Update[EntityName]RequestType;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].service.ServiceResponseBuilder;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.utils.RESTOperationResult;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.utils.RESTOperationResult.ECRUDType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]RequestType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Retrieve[EntityName]RequestType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Retrieve[EntityName]ResponseType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Update[EntityName]RequestType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].service.ServiceResponseBuilder;
 
 /**
  * @author [author]
@@ -55,7 +55,7 @@ public class [EntityName]ServiceImpl 	extends    ServiceResponseBuilder
   }
 
   /* (non-Javadoc)
-   * @see com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].service.[packagename].[EntityName]Service#create[EntityName](javax.servlet.http.HttpServletRequest, com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]RequestType)
+   * @see com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].service.[packagename].[EntityName]Service#create[EntityName](javax.servlet.http.HttpServletRequest, com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]RequestType)
    */
   public Response create[EntityName](HttpServletRequest      servletRequest, 
                                Create[EntityName]RequestType request)
@@ -70,7 +70,7 @@ public class [EntityName]ServiceImpl 	extends    ServiceResponseBuilder
   }
 
   /* (non-Javadoc)
-   * @see com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].service.[packagename].[EntityName]Service#update[EntityName](javax.servlet.http.HttpServletRequest, com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]RequestType)
+   * @see com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].service.[packagename].[EntityName]Service#update[EntityName](javax.servlet.http.HttpServletRequest, com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]RequestType)
    */
   public Response update[EntityName](HttpServletRequest      servletRequest, 
                                Update[EntityName]RequestType request)
@@ -85,7 +85,7 @@ public class [EntityName]ServiceImpl 	extends    ServiceResponseBuilder
   }
 
   /* (non-Javadoc)
-   * @see com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].service.[packagename].[EntityName]Service#retrieve[EntityName](javax.servlet.http.HttpServletRequest, com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Retrieve[EntityName]RequestType)
+   * @see com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].service.[packagename].[EntityName]Service#retrieve[EntityName](javax.servlet.http.HttpServletRequest, com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Retrieve[EntityName]RequestType)
    */
   public Response retrieve[EntityName](HttpServletRequest        servletRequest, 
                                  Retrieve[EntityName]RequestType request)

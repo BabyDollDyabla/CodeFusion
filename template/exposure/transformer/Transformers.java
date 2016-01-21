@@ -5,7 +5,7 @@
  */
 package [classPackagePrefix].[packagename];
 
-import com.[companyPackagePart].digital.platform.crsm.api.utils.Configuration;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.utils.Configuration;
 
 /**
  * @author [author]

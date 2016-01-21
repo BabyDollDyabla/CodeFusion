@@ -8,11 +8,11 @@ package [classPackagePrefix].[packagename];
 import java.util.List;
 import java.util.Map;
 
-import com.[companyPackagePart].digital.platform.crsm.api.utils.Configuration;
-import com.[companyPackagePart].digital.platform.crsm.api.validator.Errors;
-import com.[companyPackagePart].digital.platform.crsm.api.validator.ValidatorException;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]RequestType;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].[EntityName]CreateObjectType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.utils.Configuration;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.validator.Errors;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.validator.ValidatorException;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]RequestType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].[EntityName]CreateObjectType;
 import [classPackagePrefix].ValidatorErrorHandlerBase;
 import [classPackagePrefix].ValidatorRequestType;
 
@@ -54,7 +54,7 @@ public class ValidatorCreate[EntityName]RequestType extends ValidatorErrorHandle
   }
 
   /* (non-Javadoc)
-   * @see com.[companyPackagePart].digital.platform.crsm.api.validator.AbstractValidator#validate(java.lang.Object, java.util.Map)
+   * @see com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.validator.AbstractValidator#validate(java.lang.Object, java.util.Map)
    */
   @Override
   public Errors validate(Object              sourceRequest, 
@@ -147,7 +147,7 @@ public class ValidatorCreate[EntityName]RequestType extends ValidatorErrorHandle
       //compose properly error to return (a generic error)
       errors.put("GENERIC", 
                  new Errors.ErrorManagement(getErrorCodeGeneric(), 
-                                            getErrorCodeGeneric()));
+                		 					getErrorDescriptionGeneric()));
 
       //return caught error, wrapped under a generic error
       return errors;

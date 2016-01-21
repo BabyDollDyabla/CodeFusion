@@ -34,6 +34,7 @@ public class Builder
    */
   public static void main(String... files)
   {
+	  System.out.println("main START");
     try
     {
     	
@@ -53,7 +54,21 @@ public class Builder
         
 //        launchAll("userroletype");
         
-        launchAll("subscription");
+//        launchAll("subscription");
+        
+//        launchAll("offeringbuvisibility");
+        
+//        launchAll("productbuvisibility");
+    	
+//    	  launchAll("country");
+    	
+//    	  launchAll("socialtype");
+    	  
+//    	  launchAll("currency");
+    	  
+//    	  launchAll("deviceOffering");
+    	  
+    	  launchAll("profileRoleHierarchy");
       
     }
     catch ( BuilderException ex )
@@ -65,6 +80,8 @@ public class Builder
     {
       //log error
       logger.error("ATTENTION: An unexpected exception has been caught", ex);
+    } finally {
+    	System.out.println("main END");
     }
   }
   

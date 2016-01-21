@@ -1,11 +1,11 @@
-import java.io.Serializable;
-
 /**
  * [EntityName]ResponseData
  *
  * @author [author]
  */
 package [classPackagePrefix].[packagename];
+
+import java.io.Serializable;
 
 /**
  * @author [author]

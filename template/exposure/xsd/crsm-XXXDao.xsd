@@ -77,8 +77,8 @@
           <xs:element name="name"         			type="xs:string" minOccurs="0" maxOccurs="1" />
           <xs:element name="description"  			type="xs:string" minOccurs="0" maxOccurs="1" />
           <xs:element name="statusId" 	  			type="xs:int"    minOccurs="0" maxOccurs="1" />
-          <xs:element name="filteringPageElements" 	type="xs:int"    minOccurs="0" maxOccurs="1" />
-          <xs:element name="filteringPageNumber"   	type="xs:int"    minOccurs="0" maxOccurs="1" />
+	      <xs:element name="itemsPerPage" 			type="xs:int"     minOccurs="0" maxOccurs="1" />
+          <xs:element name="pageNumber"   			type="xs:int"     minOccurs="0" maxOccurs="1" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -153,6 +153,7 @@
     <xs:complexContent>
       <xs:extension base="responseType">
         <xs:sequence>
+          <xs:element name="recordsFound" type="xs:long" minOccurs="1" maxOccurs="1" />
           <xs:element name="[fieldName]RetrievedList" type="[fieldName]RetrievedListType" minOccurs="1" maxOccurs="1" />
         </xs:sequence>
       </xs:extension>
