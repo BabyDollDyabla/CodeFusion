@@ -20,30 +20,30 @@ import javax.transaction.TransactionManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.[companyPackagePart].digital.platform.crsm.dao.utils.Constants.EXCEPTION_LOG;
-import static com.[companyPackagePart].digital.platform.crsm.dao.utils.Constants.RUNTIME_EXCEPTION_LOG;
-import static com.[companyPackagePart].digital.platform.crsm.dao.utils.Constants.DAO_EXCEPTION_LOG;
-import static com.[companyPackagePart].digital.platform.crsm.dao.utils.Constants.ERROR_OCCURRED_LOG;
-import static com.[companyPackagePart].digital.platform.crsm.dao.utils.Constants.STATUS_NOT_FOUND_ERROR_DESC;
+import static com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.utils.Constants.EXCEPTION_LOG;
+import static com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.utils.Constants.RUNTIME_EXCEPTION_LOG;
+import static com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.utils.Constants.DAO_EXCEPTION_LOG;
+import static com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.utils.Constants.ERROR_OCCURRED_LOG;
+import static com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.utils.Constants.STATUS_NOT_FOUND_ERROR_DESC;
 
-import com.[companyPackagePart].digital.platform.crsm.api.utils.LogUtils;
-import com.[companyPackagePart].digital.platform.crsm.api.utils.LogUtils.LogLevel;
-import com.[companyPackagePart].digital.platform.crsm.dao.data.Status.EStatuses;
-import com.[companyPackagePart].digital.platform.crsm.dao.dto.common.CommonRetrieveFilter;
-import com.[companyPackagePart].digital.platform.crsm.dao.dto.[packagename].data.[EntityName]RequestData;
-import com.[companyPackagePart].digital.platform.crsm.dao.dto.[packagename].data.[EntityName]ResponseData;
-import com.[companyPackagePart].digital.platform.crsm.dao.exception.DaoException;
-import com.[companyPackagePart].digital.platform.crsm.dao.exception.DaoException.ExceptionCodes;
-import com.[companyPackagePart].digital.platform.crsm.dao.model.[EntityName];
-import com.[companyPackagePart].digital.platform.crsm.dao.model.RefStatus;
-import com.[companyPackagePart].digital.platform.crsm.dao.service.[EntityName]Dao;
-import com.[companyPackagePart].digital.platform.crsm.dao.utils.DaoHelper;
-import com.[companyPackagePart].digital.platform.crsm.dao.utils.QueryBuilder;
-import com.[companyPackagePart].digital.platform.crsm.dao.utils.QueryBuilder.EEntity;
-import com.[companyPackagePart].digital.platform.crsm.dao.utils.QueryBuilder.EOrder;
-import com.[companyPackagePart].digital.platform.crsm.dao.utils.QueryBuilder.ERetrieveCriteria;
-import com.[companyPackagePart].digital.platform.crsm.dao.utils.Utils;
-import com.[companyPackagePart].digital.platform.crsm.dao.validator.[EntityName]Validator;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.utils.LogUtils;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.utils.LogUtils.LogLevel;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.data.Status.EStatuses;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.dto.common.CommonRetrieveFilter;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.dto.[packagename].data.[EntityName]RequestData;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.dto.[packagename].data.[EntityName]ResponseData;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.exception.DaoException;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.exception.DaoException.ExceptionCodes;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.model.[EntityName];
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.model.RefStatus;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.service.[EntityName]Dao;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.utils.DaoHelper;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.utils.QueryBuilder;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.utils.QueryBuilder.EEntity;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.utils.QueryBuilder.EOrder;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.utils.QueryBuilder.ERetrieveCriteria;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.utils.Utils;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.validator.[EntityName]Validator;
 
 /**
  * @author [author]
@@ -105,7 +105,7 @@ public class [EntityName]DaoImpl implements [EntityName]Dao
   }
 
   /* (non-Javadoc)
-   * @see com.[companyPackagePart].digital.platform.crsm.dao.service.[EntityName]Dao#insert(java.util.List)
+   * @see com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.service.[EntityName]Dao#insert(java.util.List)
    */
   public List<[EntityName]ResponseData> insert(List<[EntityName]RequestData> [collectionFieldName]) 
   throws DaoException
@@ -212,7 +212,7 @@ public class [EntityName]DaoImpl implements [EntityName]Dao
   }
   
   /* (non-Javadoc)
-   * @see com.[companyPackagePart].digital.platform.crsm.dao.service.[EntityName]Dao#update(java.util.List)
+   * @see com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.service.[EntityName]Dao#update(java.util.List)
    */
   public List<[EntityName]ResponseData> update(List<[EntityName]RequestData> [collectionFieldName]) 
   throws DaoException
@@ -335,7 +335,7 @@ public class [EntityName]DaoImpl implements [EntityName]Dao
   }
 
   /* (non-Javadoc)
-   * @see com.[companyPackagePart].digital.platform.crsm.dao.service.[EntityName]Dao#retrieveList(com.[companyPackagePart].digital.platform.crsm.dao.dto.[fieldName].data.[EntityName]RequestData, com.[companyPackagePart].digital.platform.crsm.dao.dto.common.CommonRetrieveFilter)
+   * @see com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.service.[EntityName]Dao#retrieveList(com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.dto.[fieldName].data.[EntityName]RequestData, com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.dto.common.CommonRetrieveFilter)
    */
   public List<[EntityName]ResponseData> retrieveList([EntityName]RequestData request, 
                                                  CommonRetrieveFilter paginator) 

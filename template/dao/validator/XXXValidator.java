@@ -3,15 +3,15 @@
  *
  * @author [author]
  */
-package com.[companyPackagePart].digital.platform.crsm.dao.validator;
+package com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.validator;
 
 import java.util.List;
 
-import com.[companyPackagePart].digital.platform.crsm.dao.dto.common.CommonRetrieveFilter;
-import com.[companyPackagePart].digital.platform.crsm.dao.dto.[packagename].data.[EntityName]RequestData;
-import com.[companyPackagePart].digital.platform.crsm.dao.exception.DaoException;
-import com.[companyPackagePart].digital.platform.crsm.dao.exception.DaoException.ExceptionCodes;
-import com.[companyPackagePart].digital.platform.crsm.dao.utils.Utils;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.dto.common.CommonRetrieveFilter;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.dto.[packagename].data.[EntityName]RequestData;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.exception.DaoException;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.exception.DaoException.ExceptionCodes;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.utils.Utils;
 
 /**
  * @author [author]

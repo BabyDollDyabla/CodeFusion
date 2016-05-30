@@ -7,11 +7,11 @@ package [classPackagePrefix];
 
 import java.util.List;
 
-import com.[companyPackagePart].digital.platform.crsm.dao.common.CrsmDao;
-import com.[companyPackagePart].digital.platform.crsm.dao.dto.common.CommonRetrieveFilter;
-import com.[companyPackagePart].digital.platform.crsm.dao.dto.[packagename].data.[EntityName]RequestData;
-import com.[companyPackagePart].digital.platform.crsm.dao.dto.[packagename].data.[EntityName]ResponseData;
-import com.[companyPackagePart].digital.platform.crsm.dao.exception.DaoException;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.common.CrsmDao;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.dto.common.CommonRetrieveFilter;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.dto.[packagename].data.[EntityName]RequestData;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.dto.[packagename].data.[EntityName]ResponseData;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.exception.DaoException;
 
 /**
  * @author [author]

@@ -10,6 +10,9 @@ Create[EntityName]RequestType.fieldMap.fieldDetail.value.maxLength=255
 Create[EntityName]RequestType.transactionId.minLength=1
 Create[EntityName]RequestType.transactionId.maxLength=60
 
+Create[EntityName]RequestType.tenant.minLength=1
+Create[EntityName]RequestType.tenant.maxLength=255
+
 Create[EntityName]RequestType.[fieldName].name.minLength=1
 Create[EntityName]RequestType.[fieldName].name.maxLength=50
 
@@ -32,6 +35,9 @@ Update[EntityName]RequestType.fieldMap.fieldDetail.value.maxLength=255
 Update[EntityName]RequestType.transactionId.minLength=1
 Update[EntityName]RequestType.transactionId.maxLength=60
 
+Update[EntityName]RequestType.tenant.minLength=1
+Update[EntityName]RequestType.tenant.maxLength=255
+
 Update[EntityName]RequestType.[fieldName].name.minLength=1
 Update[EntityName]RequestType.[fieldName].name.maxLength=50
 
@@ -53,6 +59,9 @@ Retrieve[EntityName]RequestType.fieldMap.fieldDetail.value.maxLength=255
 
 Retrieve[EntityName]RequestType.transactionId.minLength=1
 Retrieve[EntityName]RequestType.transactionId.maxLength=60
+
+Retrieve[EntityName]RequestType.tenant.minLength=1
+Retrieve[EntityName]RequestType.tenant.maxLength=255
 
 Retrieve[EntityName]RequestType.[fieldName].name.minLength=1
 Retrieve[EntityName]RequestType.[fieldName].name.maxLength=50

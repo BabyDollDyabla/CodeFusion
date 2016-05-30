@@ -5,7 +5,7 @@
  */
 package [classPackagePrefix];
 
-import com.[companyPackagePart].digital.platform.crsm.dao.service.[EntityName]Dao;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.service.[EntityName]Dao;
 
 /**
  * @author [author]

@@ -1,13 +1,13 @@
 
 	
 	<bean id="dao-[fieldName]"
-		class="com.[companyPackagePart].digital.platform.crsm.dao.tenant.service.impl.[EntityName]DaoImpl">
+		class="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.tenant.service.impl.[EntityName]DaoImpl">
 		<jpa:context unitname="${crsm.persistence.unit}" property="entityManager" />
 		<tx:transaction method="*" value="Required" />
 		<property name="transactionManager" ref="jtaTransactionManager" />
 	</bean>
 	<service ref="dao-[fieldName]"
-		interface="com.[companyPackagePart].digital.platform.crsm.dao.service.[EntityName]Dao">
+		interface="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.service.[EntityName]Dao">
 
 		<service-properties>
 			<entry key="service.exported.interfaces" value="*" />
@@ -18,27 +18,27 @@
 	
 
 	<!-- MBean publication -->
-	<bean id="mbeanRegistrer" class="com.[companyPackagePart].digital.platform.crsm.api.utils.MBeanRegistrer"
+	<bean id="mbeanRegistrer" class="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.utils.MBeanRegistrer"
 		init-method="init" destroy-method="destroy">
 		<property name="bundleContext" ref="blueprintBundleContext"/> 
 		<property name="mbeans">
 			<map>
-			  <entry value="com.[companyPackagePart].digital.platform.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=AttributeCategoryDaoImplMBean" key-ref="dao-attribute-category" />
-				<entry value="com.[companyPackagePart].digital.platform.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=BusinessUserDaoImplMBean" key-ref="dao-business-user" />
-				<entry value="com.[companyPackagePart].digital.platform.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=BusinessRuleImplMBean" key-ref="dao-business-rule" />
-				<entry value="com.[companyPackagePart].digital.platform.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=GenericRuleImplMBean" key-ref="dao-generic-rule" />
-				<entry value="com.[companyPackagePart].digital.platform.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=BusinessProfileImplMBean" key-ref="dao-business-profile" />
-				<entry value="com.[companyPackagePart].digital.platform.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=TargetRuleImplMBean" key-ref="dao-target-rule" />
-				<entry value="com.[companyPackagePart].digital.platform.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=UserDaoImplMBean" key-ref="dao-user" />
-				<entry value="com.[companyPackagePart].digital.platform.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=UserExternalIdDaoImplMBean" key-ref="dao-user-external-id" />
-				<entry value="com.[companyPackagePart].digital.platform.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=UserAttributesValueDaoImplMBean" key-ref="dao-user-attributes-value" />
-				<entry value="com.[companyPackagePart].digital.platform.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=UserSocialAttributesDaoImplMBean" key-ref="dao-user-social-attributes" />
-				<entry value="com.[companyPackagePart].digital.platform.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=UserAttributeDaoImplMBean" key-ref="dao-user-attribute" />
-				<entry value="com.[companyPackagePart].digital.platform.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=LanguageDaoImplMBean" key-ref="dao-language" />
-				<entry value="com.[companyPackagePart].digital.platform.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=StatusDaoImplMBean" key-ref="dao-status" />
-				<entry value="com.[companyPackagePart].digital.platform.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=UserRoleTypeDaoImplMBean" key-ref="dao-user-role-type" />
+			  <entry value="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=AttributeCategoryDaoImplMBean" key-ref="dao-attribute-category" />
+				<entry value="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=BusinessUserDaoImplMBean" key-ref="dao-business-user" />
+				<entry value="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=BusinessRuleImplMBean" key-ref="dao-business-rule" />
+				<entry value="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=GenericRuleImplMBean" key-ref="dao-generic-rule" />
+				<entry value="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=BusinessProfileImplMBean" key-ref="dao-business-profile" />
+				<entry value="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=TargetRuleImplMBean" key-ref="dao-target-rule" />
+				<entry value="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=UserDaoImplMBean" key-ref="dao-user" />
+				<entry value="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=UserExternalIdDaoImplMBean" key-ref="dao-user-external-id" />
+				<entry value="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=UserAttributesValueDaoImplMBean" key-ref="dao-user-attributes-value" />
+				<entry value="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=UserSocialAttributesDaoImplMBean" key-ref="dao-user-social-attributes" />
+				<entry value="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=UserAttributeDaoImplMBean" key-ref="dao-user-attribute" />
+				<entry value="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=LanguageDaoImplMBean" key-ref="dao-language" />
+				<entry value="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=StatusDaoImplMBean" key-ref="dao-status" />
+				<entry value="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=UserRoleTypeDaoImplMBean" key-ref="dao-user-role-type" />
 				<!-- HERE IS THE GENERATED ROW... -->
-				<entry value="com.[companyPackagePart].digital.platform.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=[EntityName]DaoImplMBean" key-ref="dao-[fieldName]" />
+				<entry value="com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.tenant.service.mbean:type=service,tenant=${crsm.multidb.tenant},name=[EntityName]DaoImplMBean" key-ref="dao-[fieldName]" />
 				<!-- HERE IS THE GENERATED ROW... -->
 			</map>
 		</property>

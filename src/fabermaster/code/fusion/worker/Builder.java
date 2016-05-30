@@ -53,7 +53,23 @@ public class Builder
         
 //        launchAll("userroletype");
         
-        launchAll("offering");
+//        launchAll("offering");
+
+//        launchAll("subscription");
+        
+//        launchAll("offeringbuvisibility");
+        
+//        launchAll("productbuvisibility");
+    	
+//    	  launchAll("country");
+    	
+//    	  launchAll("socialtype");
+    	  
+//    	  launchAll("currency");
+    	  
+//    	  launchAll("deviceOffering");
+    	  
+    	  launchAll("profileRoleHierarchy");
       
     }
     catch ( BuilderException ex )
@@ -65,6 +81,12 @@ public class Builder
     {
       //log error
       logger.error("ATTENTION: An unexpected exception has been caught", ex);
+    }
+    finally
+    {
+      //log end
+      logger.debug("main END");
+      System.out.println("main END");
     }
   }
   

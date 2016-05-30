@@ -13,17 +13,17 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.[companyPackagePart].digital.platform.crsm.api.data.ExposureCodes;
-import com.[companyPackagePart].digital.platform.crsm.api.transformer.AbstractTransformer;
-import com.[companyPackagePart].digital.platform.crsm.api.transformer.TransformerException;
-import com.[companyPackagePart].digital.platform.crsm.api.utils.Configuration;
-import com.[companyPackagePart].digital.platform.crsm.dao.dto.[packagename].data.[EntityName]RequestData;
-import com.[companyPackagePart].digital.platform.crsm.dao.dto.[packagename].data.[EntityName]ResponseData;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]RequestType;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]ResponseType;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].[EntityName]CreateObjectType;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].[EntityName]CreatedListType;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].[EntityName]CreatedObjectType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.data.ExposureCodes;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.transformer.AbstractTransformer;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.transformer.TransformerException;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.utils.Configuration;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.dto.[packagename].data.[EntityName]RequestData;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.dao.dto.[packagename].data.[EntityName]ResponseData;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]RequestType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Create[EntityName]ResponseType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].[EntityName]CreateObjectType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].[EntityName]CreatedListType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].[EntityName]CreatedObjectType;
 
 /**
  * @author [author]
@@ -47,7 +47,7 @@ public class TransformerCreate[EntityName]RequestType extends AbstractTransforme
   }
 
   /* (non-Javadoc)
-   * @see com.[companyPackagePart].digital.platform.crsm.api.transformer.AbstractTransformer#to(java.lang.Object, java.util.Map)
+   * @see com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.transformer.AbstractTransformer#to(java.lang.Object, java.util.Map)
    */
   @Override
   public Object to(Object              source, 
@@ -91,7 +91,7 @@ public class TransformerCreate[EntityName]RequestType extends AbstractTransforme
   }
 
   /* (non-Javadoc)
-   * @see com.[companyPackagePart].digital.platform.crsm.api.transformer.AbstractTransformer#from(java.lang.Object, java.util.Map)
+   * @see com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.transformer.AbstractTransformer#from(java.lang.Object, java.util.Map)
    */
   @SuppressWarnings("unchecked")
   @Override

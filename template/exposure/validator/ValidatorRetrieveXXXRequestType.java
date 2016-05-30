@@ -7,10 +7,10 @@ package [classPackagePrefix].[packagename];
 
 import java.util.Map;
 
-import com.[companyPackagePart].digital.platform.crsm.api.utils.Configuration;
-import com.[companyPackagePart].digital.platform.crsm.api.validator.Errors;
-import com.[companyPackagePart].digital.platform.crsm.api.validator.ValidatorException;
-import com.[companyPackagePart].digital.platform.crsm.exposure.[exposureTypePackagePart].data.[packagename].Retrieve[EntityName]RequestType;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.utils.Configuration;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.validator.Errors;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.validator.ValidatorException;
+import com.[companyPackagePart].cpaas.dcpp.enabler.crsm.exposure.[exposureTypePackagePart].data.[packagename].Retrieve[EntityName]RequestType;
 import [classPackagePrefix].ValidatorErrorHandlerBase;
 import [classPackagePrefix].ValidatorRequestType;
 
@@ -52,7 +52,7 @@ public class ValidatorRetrieve[EntityName]RequestType extends ValidatorErrorHand
   }
 
   /* (non-Javadoc)
-   * @see com.[companyPackagePart].digital.platform.crsm.api.validator.AbstractValidator#validate(java.lang.Object, java.util.Map)
+   * @see com.[companyPackagePart].cpaas.dcpp.enabler.crsm.api.validator.AbstractValidator#validate(java.lang.Object, java.util.Map)
    */
   @Override
   public Errors validate(Object              sourceRequest, 
@@ -93,13 +93,13 @@ public class ValidatorRetrieve[EntityName]RequestType extends ValidatorErrorHand
 //      //validate for a numeric provided value of number of items per page
 //      validateIsANumber("[fieldName].items.per.page", String.valueOf(request.getItemsPerPage()), errors);
       //validate if provided value of  number of items per page is an acceptable one
-      validateNumberGreaterThan(request, "[fieldName].items.per.page", request.getFilteringPageElements(), errors);
+      validateNumberGreaterThan(request, "[fieldName].items.per.page", request.getItemsPerPage(), errors);
 //      //validate for a numeric provided value of page number
 //      validateIsANumber("[fieldName].page.number", String.valueOf(request.getPageNumber()), errors);
-      //validate if provided value of  number of items per page is an acceptable one
-      validateNumberGreaterThan(request, "[fieldName].page.number", request.getFilteringPageNumber(), errors);
+      //validate if provided value of page number is an acceptable one
+      validateNumberGreaterThan(request, "[fieldName].page.number", request.getPageNumber(), errors);
       //validate page number that is required if items per page value has been provided
-      validateRequiredIf("[fieldName].page.number", request.getFilteringPageNumber(), ((request.getFilteringPageElements() != null) ? true : false), errors);
+      validateRequiredIf("[fieldName].page.number", request.getPageNumber(), ((request.getItemsPerPage() != null) ? true : false), errors);
 
       //check for caught validation errors      
       if (errors.size() > 0)
@@ -121,7 +121,7 @@ public class ValidatorRetrieve[EntityName]RequestType extends ValidatorErrorHand
       //compose properly error to return (a generic error)
       errors.put("GENERIC", 
                  new Errors.ErrorManagement(getErrorCodeGeneric(), 
-                                            getErrorCodeGeneric()));
+                		 					getErrorDescriptionGeneric()));
 
       //return caught error, wrapped under a generic error
       return errors;
