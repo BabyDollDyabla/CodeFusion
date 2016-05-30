@@ -53,7 +53,7 @@ public class Builder
         
 //        launchAll("userroletype");
         
-        launchAll("subscription");
+        launchAll("offering");
       
     }
     catch ( BuilderException ex )
